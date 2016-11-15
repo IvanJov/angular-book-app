@@ -1,4 +1,4 @@
-# angular-books-app
+# angular-book-app
 
 This is simple NodeJS/Angular app that reads books from books.json file, displays them and manipulates with them.
 
