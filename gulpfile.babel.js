@@ -474,6 +474,7 @@ gulp.task('build', cb => {
             'copy:assets',
             'copy:fonts:dist',
             'copy:server',
+            'copy:book',
             'webpack:dist'
         ],
         'revReplaceWebpack',
@@ -552,6 +553,11 @@ gulp.task('copy:server', () => {
         'package.json'
     ], {cwdbase: true})
         .pipe(gulp.dest(paths.dist));
+});
+
+gulp.task('copy:book', () => {
+  return gulp.src(['book.json'])
+    .pipe(gulp.dest(`${paths.dist}`));
 });
 
 /********************
