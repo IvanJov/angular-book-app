@@ -1,0 +1,30 @@
+.bookthumbnail {
+  padding: 20px;
+
+  .box {
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 10px;
+    background: white;
+  }
+
+  img.cover {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 16px;
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+
+  h4 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+

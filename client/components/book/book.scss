@@ -1,0 +1,78 @@
+.book-container {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.book-heading, .book-similar {
+  background: #efeced;
+}
+
+.book-heading {
+  p.intro {
+    margin: 40px 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .book-categories {
+    span {
+      text-decoration: underline;
+    }
+  }
+}
+
+.book-introduction {
+  h4 {
+    color: #acb1b2;
+    font-weight: 200;
+    font-size: 22px;
+  }
+
+  p {
+    margin: 40px 0;
+    line-height: 26px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .line {
+    border-bottom: 1px solid black;
+    max-width: 150px;
+    margin: 10px auto;
+  }
+
+  .book-author {
+    margin-top: 20px;
+    text-align: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 20px;
+    }
+
+    .book-written-by {
+      font-weight: 300;
+      font-size: 17px;
+    }
+  }
+}
+
+.book-similar {
+  .similar-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .book-heading .container, .book-introduction .container {
+    max-width: 650px;
+  }
+
+  .book-similar .container {
+    max-width: 850px;
+  }
+}

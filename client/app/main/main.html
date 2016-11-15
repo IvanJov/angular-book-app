@@ -1,0 +1,47 @@
+<header class="filter">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        Find me the best
+        <select class="form-control" ng-model="$ctrl.filterCategory" ng-change="$ctrl.onCategoryChange()">
+          <option value="all">--</option>
+          <option ng-repeat="category in $ctrl.categories" value="{{category}}">{{category}}</option>
+        </select>
+        books about
+        <select class="form-control" ng-model="$ctrl.filterGenre" ng-change="$ctrl.updateFilter()">
+          <option value="all">--</option>
+          <option ng-repeat="genre in $ctrl.genres" value="{{genre}}">{{genre}}</option>
+        </select>
+        <input class="form-control" ng-model="$ctrl.filterText" ng-change="$ctrl.updateFilter()">
+      </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <h2 class="not-found" ng-show="$ctrl.items.length == 0">Can't find book you requested :(</h2>
+  <bookthumbnail ng-repeat="book in $ctrl.items" book="book"></bookthumbnail>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-8 pagination-container">
+      <ul ng-if="$ctrl.pager.pages.length" class="pagination">
+        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}">
+          <a ng-click="$ctrl.setPage(1)">First</a>
+        </li>
+        <li ng-class="{disabled:$ctrl.pager.currentPage === 1}">
+          <a ng-click="$ctrl.setPage($ctrl.pager.currentPage - 1)">Previous</a>
+        </li>
+        <li ng-repeat="page in $ctrl.pager.pages" ng-class="{active:$ctrl.pager.currentPage === page}">
+          <a ng-click="$ctrl.setPage(page)">{{page}}</a>
+        </li>
+        <li ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+          <a ng-click="$ctrl.setPage($ctrl.pager.currentPage + 1)">Next</a>
+        </li>
+        <li ng-class="{disabled:$ctrl.pager.currentPage === $ctrl.pager.totalPages}">
+          <a ng-click="$ctrl.setPage($ctrl.pager.totalPages)">Last</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

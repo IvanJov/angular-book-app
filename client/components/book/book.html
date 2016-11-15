@@ -1,0 +1,69 @@
+<div class="container-fluid book-container book-heading">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{$ctrl.book.name}}</h2>
+        <h5>By {{$ctrl.book.author.name}}</h5>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <p class="intro">
+          {{$ctrl.book.description}}
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div class="book-categories-heading">Categories</div>
+        <div class="book-categories">
+          <span>{{$ctrl.book.genre.category}}</span>, <span>{{$ctrl.book.genre.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid book-container book-introduction">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Introduction</h4>
+        <h3>{{$ctrl.book.description}}</h3>
+
+        <p ng-repeat="introduction in $ctrl.book.introduction">{{introduction.content}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 book-author">
+        <img src="{{$ctrl.book.author.avatar}}">
+
+        <div class="book-written-by">Written by {{$ctrl.book.author.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid book-container book-similar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 similar-heading">
+        <h3>Similar reading</h3>
+        <h5>If you liked this book, we recommend ou to check out these emerging titles.</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <bookthumbnail ng-repeat="book in $ctrl.similar" book="book"></bookthumbnail>
+    </div>
+  </div>
+</div>

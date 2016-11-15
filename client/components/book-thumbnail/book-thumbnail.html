@@ -1,0 +1,28 @@
+<div class="col-md-4 bookthumbnail">
+  <div class="box">
+    <div class="row">
+      <div class="col-md-12">
+        <a href="/{{$ctrl.book.id}}">
+          <img src="{{$ctrl.book.cover}}" class="cover">
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>
+          <a href="/{{$ctrl.book.id}}">{{$ctrl.book.shorterName}}</a>
+        </h3>
+        <h4>By {{$ctrl.book.author.name}}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="glyphicon glyphicon-heart-empty"></div>
+        {{$ctrl.book.likes}}
+      </div>
+      <div class="col-md-6 text-right">
+        {{$ctrl.book.humanFrom}}
+      </div>
+    </div>
+  </div>
+</div>
