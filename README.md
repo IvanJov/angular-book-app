@@ -1,6 +1,10 @@
-# angular-book-app
+# Angular Book App
 
 This is simple NodeJS/Angular app that reads books from books.json file, displays them and manipulates with them.
+
+## Check it online
+
+App is deployed on Heroku and you can check it here: [https://angular-book-app.herokuapp.com/](https://angular-book-app.herokuapp.com/)
 
 ## Getting Started
 
